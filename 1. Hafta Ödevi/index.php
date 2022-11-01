@@ -1,6 +1,6 @@
 <?php
 $agil =array();
-$agil[0]=array("agilsayi"=>9,"kapasite"=>"40","toplamkoyun"=>"300");
+$agil[0]=array("agilsayi"=>9,"kapasite"=>"40","toplamkoyun"=>"360");
 $kapasite=$agil[0] ["agilsayi"]*$agil[0] ["kapasite"];
 $toplam=$agil[0] ["toplamkoyun"];;
 echo "Toplam Ağıl: ".$agil[0] ["agilsayi"];echo "<br>";
@@ -15,7 +15,7 @@ for ($i = $agil[0] ["agilsayi"]; $i >= 1; $i--) {
             echo "Dışarıda Kalan Koyun: ".$toplam;
     }
     }
-    elseif($toplam<$agil[0] ["kapasite"]){
+    elseif($toplam<=$agil[0] ["kapasite"]){
         echo "$i. Ağıl: ".$toplam;echo "<br>";
         $toplam-=$toplam;
     }
