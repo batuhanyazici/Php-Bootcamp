@@ -1,17 +1,17 @@
 <?php
   session_start();
 
-  $islem = $_GET["hareket"]; // İşlemleri Ayırmak İçin
-  $adet = $_POST["adet"]; // Ekleme İşlemi İçin
-  $urun = $_POST["urun"]; // Ekleme İşlemi İçin
-  $urunno = $_GET["urunno"]; // Silme İşlemi İçin
+  $islem = $_GET["hareket"];
+  $adet = $_POST["adet"]; 
+  $urun = $_POST["urun"]; 
+  $urunno = $_GET["urunno"]; 
 
   if ($islem == "ekle") {
     if ($adet > 0) {
       if (isset($_SESSION["sepet"][$urun])) {
-        $_SESSION["sepet"][$urun] += $adet; // Mevcut Ürüne Ekleme Yap
+        $_SESSION["sepet"][$urun] += $adet; 
       } else {
-        $_SESSION["sepet"][$urun] = $adet; // Tek Ürünü Sepete Ekle
+        $_SESSION["sepet"][$urun] = $adet; 
       }
     }
     header("Location:index.php");
