@@ -2,6 +2,4 @@
 
 Daha önceden adminin yönetim paneli üzerinden eklenen tarih ve saatler kullanıcı tarafından anasayfada gözükür. Kullanıcı anasayfadan tarihi seçer eğer o tarihte müsait saat kaldı ise ekranda sayfa yenilenmeden gözükür. Bu aşamadan sonra ad soyad , mail ve telefon numarasını girerek rezervasyonunu oluşturur.<br/>
 
-
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/84849029/205419296-0b2b2ffa-1608-43c8-abd4-7eae077631c3.gif)
-
+https://user-images.githubusercontent.com/84849029/205419419-6e8a6fc3-ef11-4d1a-9925-2bb44f737bbe.mp4
