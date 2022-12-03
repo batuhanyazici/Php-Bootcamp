@@ -126,7 +126,7 @@ if (isset($_POST["csv"])) {
     $dosya = fopen("tablo.csv", "wbt");
     foreach ($satir as $item) {
         foreach ($item as $yazi) {
-            fwrite($dosya, "$yazi;");
+            fwrite($dosya, "$yazi; \n");
         }
     }
 
