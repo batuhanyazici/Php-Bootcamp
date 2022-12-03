@@ -121,13 +121,13 @@ if (isset($_POST["saatekle"])) {
 }
 if (isset($_POST["csv"])) {
     $sorgu = $baglan->query("select * from kullanici");
-    $satir = $sorgu->fetchAll(PDO::FETCH_ASSOC);
-    touch("tablo.csv");
-    $dosya = fopen("tablo.csv", "wbt");
-    foreach ($satir as $item) {
-        foreach ($item as $yazi) {
-            fwrite($dosya, "$yazi;");
-        }
+    $ayrac=";";
+    $dosya = fopen("tablo.csv", "w");
+    $alanlar= array('ID','Ad Soyad','Email','Telefon','Tarih Id','Saat Id');
+    fputcsv($dosya,$alanlar,$ayrac);
+    while ($satir = $sorgu->fetch(PDO::FETCH_ASSOC)) {
+        $bilgi= array($satir["id"],$satir["adsoyad"],$satir["email"],$satir["telefon"],$satir["tarih_id"],$satir["saat_id"]);
+        fputcsv($dosya,$bilgi,$ayrac);
     }
 
     if ((file_exists("tablo.csv"))) {
